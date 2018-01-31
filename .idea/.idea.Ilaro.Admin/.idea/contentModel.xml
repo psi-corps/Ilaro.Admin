@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\dev\psicorps\Psi.AspNetCore.Admin" t="IncludeFlat">
+      <e p="Ilaro.Admin.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive">
+        <e p="xunit.core.2.0.0\build\_Desktop\xunit.execution.desktop.dll" t="Include" />
+      </e>
+      <e p="samples\Ilaro.Admin.Sample" t="IncludeRecursive">
+        <e p="Areas" t="Include">
+          <e p="IlaroAdmin" t="Include">
+            <e p="Views" t="Include">
+              <e p="Shared" t="Include">
+                <e p="_DatabaseResetInfo.cshtml" t="Include" />
+                <e p="_Layout.cshtml" t="Include" />
+              </e>
+              <e p="Web.config" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Configurators" t="Include">
+          <e p="CategoryConfiguration.cs" t="Include" />
+          <e p="CustomerConfigurator.cs" t="Include" />
+          <e p="EmployeeConfigurator.cs" t="Include" />
+          <e p="EmployeeTerritoryConfiguration.cs" t="Include" />
+          <e p="EntityChangeConfiguration.cs" t="Include" />
+          <e p="OrderConfigurator.cs" t="Include" />
+          <e p="OrderDetailConfiguration.cs" t="Include" />
+          <e p="ProductConfiguration.cs" t="Include" />
+          <e p="RegionConfigurator.cs" t="Include" />
+          <e p="ShipperConfiguration.cs" t="Include" />
+          <e p="SupplierConfiguration.cs" t="Include" />
+          <e p="TerritoryConfiguration.cs" t="Include" />
+        </e>
+        <e p="Content" t="Include">
+          <e p="bootstrap.min.css" t="Include" />
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
+          <e p="MaintenanceController.cs" t="Include" />
+        </e>
+        <e p="DatabaseReset" t="Include">
+          <e p="DatabaseResetJob.cs" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="ClearDb.sql" t="Include" />
+            <e p="InsertData.sql" t="Include" />
+          </e>
+        </e>
+        <e p="Global.asax" t="Include" />
+        <e p="Global.asax.cs" t="Include" />
+        <e p="Ilaro.Admin.Sample.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Northwind" t="Include">
+            <e p="Category.cs" t="Include" />
+            <e p="Customer.cs" t="Include" />
+            <e p="Employee.cs" t="Include" />
+            <e p="EmployeeTerritory.cs" t="Include" />
+            <e p="EntityChange.cs" t="Include" />
+            <e p="Order.cs" t="Include" />
+            <e p="OrderDetail.cs" t="Include" />
+            <e p="Product.cs" t="Include" />
+            <e p="Region.cs" t="Include" />
+            <e p="Shipper.cs" t="Include" />
+            <e p="Supplier.cs" t="Include" />
+            <e p="Territory.cs" t="Include" />
+          </e>
+        </e>
+        <e p="NLog.config" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="PublishProfiles" t="Include">
+            <e p="Admin.Ilaro.net.pubxml" t="Include" />
+          </e>
+        </e>
+        <e p="Views" t="Include">
+          <e p="Account" t="Include">
+            <e p="Login.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="Web.config" t="Include" />
+        <e p="Web.Release.config" t="Include" />
+      </e>
+      <e p="sources\Psi.Adminify.AspNetCore" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="EntityController.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Psi.Adminify.AspNetCore.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Psi.Adminify.AspNetCore.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="sources\Psi.AspNetCore.Adminify" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Configuration" t="Include">
+          <e p="IConfiguration.cs" t="Include" />
+          <e p="IConfigurationProvider.cs" t="Include" />
+        </e>
+        <e p="DataMemberType.cs" t="Include" />
+        <e p="EntityDescriptor.cs" t="Include" />
+        <e p="EntityDescriptorExtensions.cs" t="Include" />
+        <e p="History" t="Include">
+          <e p="ChangeType.cs" t="Include" />
+          <e p="IEntityChange.cs" t="Include" />
+        </e>
+        <e p="Logging" t="Include">
+          <e p="ILogger.cs" t="Include" />
+          <e p="ILoggerFactory.cs" t="Include" />
+          <e p="Severity.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Psi.AspNetCore.Adminify.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="OrderType.cs" t="Include" />
+        <e p="PropertyDescriptor.cs" t="Include" />
+        <e p="PropertyTypeDescriptor.cs" t="Include" />
+        <e p="Psi.AspNetCore.Adminify.csproj" t="IncludeRecursive" />
+        <e p="TypeExtensions.cs" t="Include" />
+      </e>
+      <e p="src\Ilaro.Admin" t="IncludeRecursive">
+        <e p="App_Start" t="Include">
+          <e p="BundleInitialise.cs" t="Include" />
+          <e p="GlobalFiltersInitialise.cs" t="Include" />
+          <e p="ModelBindersInitialise.cs" t="Include" />
+          <e p="RazorGeneratorMvcStart.cs" t="Include" />
+        </e>
+        <e p="Areas" t="Include">
+          <e p="IlaroAdmin" t="Include">
+            <e p="Controllers" t="Include">
+              <e p="AccountController.cs" t="Include" />
+              <e p="EntitiesController.cs" t="Include" />
+              <e p="EntityController.cs" t="Include" />
+              <e p="GroupController.cs" t="Include" />
+              <e p="ResourceController.cs" t="Include" />
+              <e p="SharedController.cs" t="Include" />
+            </e>
+            <e p="IlaroAdminAreaRegistration.cs" t="Include" />
+            <e p="Views" t="Include">
+              <e p="Entities" t="Include">
+                <e p="_Paging.cshtml" t="Include" />
+                <e p="_Paging.generated.cs" t="Include" />
+                <e p="Changes.cshtml" t="Include" />
+                <e p="Changes.generated.cs" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+                <e p="Index.generated.cs" t="Include" />
+              </e>
+              <e p="Entity" t="Include">
+                <e p="_PropertiesGroup.cshtml" t="Include" />
+                <e p="_PropertiesGroup.generated.cs" t="Include" />
+                <e p="_PropertiesGroups.cshtml" t="Include" />
+                <e p="_PropertiesGroups.generated.cs" t="Include" />
+                <e p="_PropertyEditor.cshtml" t="Include" />
+                <e p="_PropertyEditor.generated.cs" t="Include" />
+                <e p="Create.cshtml" t="Include" />
+                <e p="Create.generated.cs" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Delete.generated.cs" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Edit.generated.cs" t="Include" />
+              </e>
+              <e p="Group" t="Include">
+                <e p="_GroupPartial.cshtml" t="Include" />
+                <e p="_GroupPartial.generated.cs" t="Include" />
+                <e p="_LastChanges.cshtml" t="Include" />
+                <e p="_LastChanges.generated.cs" t="Include" />
+                <e p="Details.cshtml" t="Include" />
+                <e p="Details.generated.cs" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+                <e p="Index.generated.cs" t="Include" />
+              </e>
+              <e p="Shared" t="Include">
+                <e p="_Filter.cshtml" t="Include" />
+                <e p="_Filter.generated.cs" t="Include" />
+                <e p="_Layout.cshtml" t="Include" />
+                <e p="_Layout.generated.cs" t="Include" />
+                <e p="_Messages.cshtml" t="Include" />
+                <e p="_Messages.generated.cs" t="Include" />
+                <e p="_UserInfo.cshtml" t="Include" />
+                <e p="_UserInfo.generated.cs" t="Include" />
+                <e p="DisplayTemplates" t="Include">
+                  <e p="BoolPartial.cshtml" t="Include" />
+                  <e p="BoolPartial.generated.cs" t="Include" />
+                  <e p="DatePartial.cshtml" t="Include" />
+                  <e p="DatePartial.generated.cs" t="Include" />
+                  <e p="DateTimePartial.cshtml" t="Include" />
+                  <e p="DateTimePartial.generated.cs" t="Include" />
+                  <e p="DbImagePartial.cshtml" t="Include" />
+                  <e p="DbImagePartial.generated.cs" t="Include" />
+                  <e p="EnumPartial.cshtml" t="Include" />
+                  <e p="EnumPartial.generated.cs" t="Include" />
+                  <e p="FilePartial.cshtml" t="Include" />
+                  <e p="FilePartial.generated.cs" t="Include" />
+                  <e p="HtmlPartial.cshtml" t="Include" />
+                  <e p="HtmlPartial.generated.cs" t="Include" />
+                  <e p="ImagePartial.cshtml" t="Include" />
+                  <e p="ImagePartial.generated.cs" t="Include" />
+                  <e p="NumericPartial.cshtml" t="Include" />
+                  <e p="NumericPartial.generated.cs" t="Include" />
+                  <e p="PasswordPartial.cshtml" t="Include" />
+                  <e p="PasswordPartial.generated.cs" t="Include" />
+                  <e p="TextPartial.cshtml" t="Include" />
+                  <e p="TextPartial.generated.cs" t="Include" />
+                  <e p="UrlPartial.cshtml" t="Include" />
+                  <e p="UrlPartial.generated.cs" t="Include" />
+                </e>
+                <e p="EditorTemplates" t="Include">
+                  <e p="CheckboxPartial.cshtml" t="Include" />
+                  <e p="CheckboxPartial.generated.cs" t="Include" />
+                  <e p="DatePartial.cshtml" t="Include" />
+                  <e p="DatePartial.generated.cs" t="Include" />
+                  <e p="DateTimePartial.cshtml" t="Include" />
+                  <e p="DateTimePartial.generated.cs" t="Include" />
+                  <e p="DropDownListPartial.cshtml" t="Include" />
+                  <e p="DropDownListPartial.generated.cs" t="Include" />
+                  <e p="DualListPartial.cshtml" t="Include" />
+                  <e p="DualListPartial.generated.cs" t="Include" />
+                  <e p="FilePartial.cshtml" t="Include" />
+                  <e p="FilePartial.generated.cs" t="Include" />
+                  <e p="HtmlPartial.cshtml" t="Include" />
+                  <e p="HtmlPartial.generated.cs" t="Include" />
+                  <e p="MarkdownPartial.cshtml" t="Include" />
+                  <e p="MarkdownPartial.generated.cs" t="Include" />
+                  <e p="NumericPartial.cshtml" t="Include" />
+                  <e p="NumericPartial.generated.cs" t="Include" />
+                  <e p="OneToManyPartial.cshtml" t="Include" />
+                  <e p="OneToManyPartial.generated.cs" t="Include" />
+                  <e p="PasswordPartial.cshtml" t="Include" />
+                  <e p="PasswordPartial.generated.cs" t="Include" />
+                  <e p="TextAreaPartial.cshtml" t="Include" />
+                  <e p="TextAreaPartial.generated.cs" t="Include" />
+                  <e p="TextBoxPartial.cshtml" t="Include" />
+                  <e p="TextBoxPartial.generated.cs" t="Include" />
+                  <e p="TimePartial.cshtml" t="Include" />
+                  <e p="TimePartial.generated.cs" t="Include" />
+                </e>
+                <e p="FilterTemplates" t="Include">
+                  <e p="DateTimePartial.cshtml" t="Include" />
+                  <e p="DateTimePartial.generated.cs" t="Include" />
+                  <e p="NumberPartial.cshtml" t="Include" />
+                  <e p="NumberPartial.generated.cs" t="Include" />
+                  <e p="StringPartial.cshtml" t="Include" />
+                  <e p="StringPartial.generated.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Web.config" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Content" t="Include">
+          <e p="css" t="Include">
+            <e p="bootstrap-datetimepicker.min.css" t="Include" />
+            <e p="bootstrap-duallistbox.min.css" t="Include" />
+            <e p="bootstrap-markdown.min.css" t="Include" />
+            <e p="bootstrap-spinedit.css" t="Include" />
+            <e p="bootstrap.min.css" t="Include" />
+            <e p="chosen.min.css" t="Include" />
+            <e p="font-awesome.min.css" t="Include" />
+            <e p="site.css" t="Include" />
+            <e p="summernote.css" t="Include" />
+          </e>
+          <e p="fonts" t="Include">
+            <e p="fontawesome-webfont.eot" t="Include" />
+            <e p="fontawesome-webfont.svg" t="Include" />
+            <e p="fontawesome-webfont.ttf" t="Include" />
+            <e p="fontawesome-webfont.woff" t="Include" />
+            <e p="FontAwesome.otf" t="Include" />
+            <e p="glyphicons-halflings-regular.eot" t="Include" />
+            <e p="glyphicons-halflings-regular.svg" t="Include" />
+            <e p="glyphicons-halflings-regular.ttf" t="Include" />
+            <e p="glyphicons-halflings-regular.woff" t="Include" />
+          </e>
+          <e p="img" t="Include">
+            <e p="chosen-sprite.png" t="Include" />
+            <e p="chosen-sprite@2x.png" t="Include" />
+          </e>
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="HtmlHelperCheckBoxExtensions.cs" t="Include" />
+          <e p="HtmlHelperDropDownListExtensions.cs" t="Include" />
+          <e p="HtmlHelperExtensions.cs" t="Include" />
+          <e p="HtmlHelperPasswordExtensions.cs" t="Include" />
+          <e p="HtmlHelpersTextAreaExtensions.cs" t="Include" />
+          <e p="HtmlHelperTextBoxExtensions.cs" t="Include" />
+          <e p="UrlHelperExtensions.cs" t="Include" />
+        </e>
+        <e p="Ilaro.Admin.csproj" t="IncludeRecursive" />
+        <e p="IlaroPrecompiledMvcEngine.cs" t="Include" />
+        <e p="Infrastructure" t="Include">
+          <e p="CopyIsAjaxRequestFromRequestToViewBagAttribute.cs" t="Include" />
+          <e p="EmbeddedVirtualFile.cs" t="Include" />
+          <e p="EmbeddedVirtualPathProvider.cs" t="Include" />
+          <e p="IlaroAdminFilterAttribute.cs" t="Include" />
+          <e p="ModelStateErrorsBuilderAttribute.cs" t="Include" />
+          <e p="NotificatorAttribute.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="bootstrap-datetimepicker.min.js" t="Include" />
+          <e p="bootstrap-markdown.js" t="Include" />
+          <e p="bootstrap-spinedit.js" t="Include" />
+          <e p="bootstrap.file-input.js" t="Include" />
+          <e p="bootstrap.min.js" t="Include" />
+          <e p="chosen.jquery.min.js" t="Include" />
+          <e p="ilaro.js" t="Include" />
+          <e p="jquery-2.1.0.min.js" t="Include" />
+          <e p="jquery.bootstrap-duallistbox.min.js" t="Include" />
+          <e p="jquery.validate.min.js" t="Include" />
+          <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+          <e p="marked.min.js" t="Include" />
+          <e p="moment-with-langs.min.js" t="Include" />
+          <e p="moment.min.js" t="Include" />
+          <e p="summernote.min.js" t="Include" />
+        </e>
+        <e p="TableInfoModelBinder.cs" t="Include" />
+        <e p="Validation" t="Include">
+          <e p="PropertyModelValidatorProvider.cs" t="Include" />
+          <e p="PropertyUnobtrusiveValidationAttributesGenerator.cs" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="Web.config" t="Include" />
+        </e>
+        <e p="Web.config" t="Include" />
+        <e p="Web.Debug.config" t="Include" />
+        <e p="Web.Release.config" t="Include" />
+      </e>
+      <e p="src\Ilaro.Admin.Autofac" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="App_Start" t="Include">
+          <e p="DependencyInjectionStart.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Bootstrapper.cs" t="Include" />
+        <e p="Ilaro.Admin.Autofac.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="src\Ilaro.Admin.Core" t="IncludeRecursive">
+        <e p="Admin.cs" t="Include" />
+        <e p="App_GlobalResources" t="Include">
+          <e p="IlaroAdminResources.Designer.cs" t="Include" />
+          <e p="IlaroAdminResources.resx" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ConcurrencyCheck.cs" t="Include" />
+        <e p="ConcurrencyCheckException.cs" t="Include" />
+        <e p="Const.cs" t="Include" />
+        <e p="Customization" t="Include">
+          <e p="AttributesConfigurator.cs" t="Include" />
+          <e p="Customizers" t="Include">
+            <e p="ClassCustomizerHolder.cs" t="Include" />
+            <e p="CustomizersHolder.cs" t="Include" />
+            <e p="EntityCustomizer.cs" t="Include" />
+            <e p="ICustomizersHolder.cs" t="Include" />
+            <e p="IEntityCustomizer.cs" t="Include" />
+            <e p="IPropertyCustomizer.cs" t="Include" />
+            <e p="PropertyCustomizer.cs" t="Include" />
+            <e p="PropertyCustomizerHolder.cs" t="Include" />
+            <e p="TemplateUtil.cs" t="Include" />
+          </e>
+          <e p="Entity.cs" t="Include" />
+          <e p="EntityConfiguration.cs" t="Include" />
+          <e p="TypeExtensions.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="ChangesDescriber.cs" t="Include" />
+          <e p="DataBehavior.cs" t="Include" />
+          <e p="DataBehaviorExtensions.cs" t="Include" />
+          <e p="DB.cs" t="Include" />
+          <e p="DbCommandExecutor.cs" t="Include" />
+          <e p="DefaultValueBehavior.cs" t="Include" />
+          <e p="EntityService.cs" t="Include" />
+          <e p="Extensions" t="Include">
+            <e p="DbCommandExtensions.cs" t="Include" />
+            <e p="ObjectExtensions.cs" t="Include" />
+          </e>
+          <e p="IComparingRecords.cs" t="Include" />
+          <e p="ICreatingRecords.cs" t="Include" />
+          <e p="IDeletingRecords.cs" t="Include" />
+          <e p="IDescribingChanges.cs" t="Include" />
+          <e p="IEntityService.cs" t="Include" />
+          <e p="IExecutingDbCommand.cs" t="Include" />
+          <e p="IFetchingRecords.cs" t="Include" />
+          <e p="IFetchingRecordsHierarchy.cs" t="Include" />
+          <e p="IRecordsService.cs" t="Include" />
+          <e p="IUpdatingRecords.cs" t="Include" />
+          <e p="Massive.cs" t="Include" />
+          <e p="RecordsComparer.cs" t="Include" />
+          <e p="RecordsCreator.cs" t="Include" />
+          <e p="RecordsDeleter.cs" t="Include" />
+          <e p="RecordsHierarchySource.cs" t="Include" />
+          <e p="RecordsService.cs" t="Include" />
+          <e p="RecordsSource.cs" t="Include" />
+          <e p="RecordsUpdater.cs" t="Include" />
+        </e>
+        <e p="DataAnnotations" t="Include">
+          <e p="AuthorizeWrapperAttribute.cs" t="Include" />
+          <e p="CascadeAttribute.cs" t="Include" />
+          <e p="ColumnsAttribute.cs" t="Include" />
+          <e p="ConcurrencyCheckAttribute.cs" t="Include" />
+          <e p="DefaultFilterAttribute.cs" t="Include" />
+          <e p="DefaultOrderAttribute.cs" t="Include" />
+          <e p="DeletableAttribute.cs" t="Include" />
+          <e p="FileAttribute.cs" t="Include" />
+          <e p="FileOptions.cs" t="Include" />
+          <e p="FilterableAttribute.cs" t="Include" />
+          <e p="GroupsAttribute.cs" t="Include" />
+          <e p="ImageSettings.cs" t="Include" />
+          <e p="ImageSettingsAttribute.cs" t="Include" />
+          <e p="LinksAttribute.cs" t="Include" />
+          <e p="ManyToManyAttribute.cs" t="Include" />
+          <e p="NameCreation.cs" t="Include" />
+          <e p="OnCreateAttribute.cs" t="Include" />
+          <e p="OnDeleteAttribute.cs" t="Include" />
+          <e p="OnSaveAttribute.cs" t="Include" />
+          <e p="OnUpdateAttribute.cs" t="Include" />
+          <e p="RecordDisplayAttribute.cs" t="Include" />
+          <e p="SearchAttribute.cs" t="Include" />
+          <e p="SoftDeleteAttribute.cs" t="Include" />
+          <e p="TemplateAttribute.cs" t="Include" />
+          <e p="VerboseAttribute.cs" t="Include" />
+        </e>
+        <e p="DataTypeConverter.cs" t="Include" />
+        <e p="DeleteOption.cs" t="Include" />
+        <e p="DeleteOptionsHierarchyBuilder.cs" t="Include" />
+        <e p="EntityChangeType.cs" t="Include" />
+        <e p="EntityExtensions.cs" t="Include" />
+        <e p="EntityHierarchy.cs" t="Include" />
+        <e p="EntityRecord.cs" t="Include" />
+        <e p="EntityRecordCreator.cs" t="Include" />
+        <e p="EntitySearch.cs" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="AssemblyExtensions.cs" t="Include" />
+          <e p="CollectionExtensions.cs" t="Include" />
+          <e p="ComparableExtensions.cs" t="Include" />
+          <e p="DotNetToMomentDateTimeFormat.cs" t="Include" />
+          <e p="EntityExtensions.cs" t="Include" />
+          <e p="EntityRecordExtensions.cs" t="Include" />
+          <e p="EnumExtensions.cs" t="Include" />
+          <e p="PropertyExtensions.cs" t="Include" />
+          <e p="PropertyValuesExtensions.cs" t="Include" />
+          <e p="StreamExtensions.cs" t="Include" />
+          <e p="StringExtensions.cs" t="Include" />
+          <e p="TypeExtensions.cs" t="Include" />
+        </e>
+        <e p="File" t="Include">
+          <e p="FileDeleter.cs" t="Include" />
+          <e p="FileHandler.cs" t="Include" />
+          <e p="FileNameCreator.cs" t="Include" />
+          <e p="FileSaver.cs" t="Include" />
+          <e p="ICreatingNameFiles.cs" t="Include" />
+          <e p="IDeletingFiles.cs" t="Include" />
+          <e p="IHandlingFiles.cs" t="Include" />
+          <e p="ImageResizer.cs" t="Include" />
+          <e p="IResizingImages.cs" t="Include" />
+          <e p="ISavingFiles.cs" t="Include" />
+          <e p="Pather.cs" t="Include" />
+        </e>
+        <e p="Filters" t="Include">
+          <e p="BaseFilter.cs" t="Include" />
+          <e p="BoolEntityFilter.cs" t="Include" />
+          <e p="ChangeEntityFilter.cs" t="Include" />
+          <e p="DateTimeEntityFilter.cs" t="Include" />
+          <e p="EnumEntityFilter.cs" t="Include" />
+          <e p="FilterFactory.cs" t="Include" />
+          <e p="ForeignEntityFilter.cs" t="Include" />
+          <e p="IFilterFactory.cs" t="Include" />
+          <e p="ITypeGrouper.cs" t="Include" />
+          <e p="Number.cs" t="Include" />
+          <e p="NumberEntityFilter.cs" t="Include" />
+          <e p="StringEntityFilter.cs" t="Include" />
+          <e p="TemplatedSelectListItem.cs" t="Include" />
+        </e>
+        <e p="HttpContextUserProvider.cs" t="Include" />
+        <e p="IIlaroAdmin.cs" t="Include" />
+        <e p="Ilaro.Admin.Core.csproj" t="IncludeRecursive" />
+        <e p="IlaroAdmin.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="ChangeRow.cs" t="Include" />
+          <e p="Column.cs" t="Include" />
+          <e p="EntitiesChangesModel.cs" t="Include" />
+          <e p="EntitiesIndexModel.cs" t="Include" />
+          <e p="EntityCreateModel.cs" t="Include" />
+          <e p="EntityDeleteModel.cs" t="Include" />
+          <e p="EntityEditModel.cs" t="Include" />
+          <e p="GroupIndexModel.cs" t="Include" />
+          <e p="GroupModel.cs" t="Include" />
+          <e p="GroupProperties.cs" t="Include" />
+          <e p="PagedRecords.cs" t="Include" />
+          <e p="PagerInfo.cs" t="Include" />
+          <e p="Paging" t="Include">
+            <e p="IPagedList.cs" t="Include" />
+            <e p="PagedList.cs" t="Include" />
+            <e p="Pager.cs" t="Include" />
+            <e p="PagingExtensions.cs" t="Include" />
+          </e>
+          <e p="PropertyDeleteOption.cs" t="Include" />
+          <e p="TableInfo.cs" t="Include" />
+          <e p="WrappedFilterOption.cs" t="Include" />
+        </e>
+        <e p="NotificateType.cs" t="Include" />
+        <e p="Notificator.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PropertyTemplate.cs" t="Include" />
+        <e p="PropertyValue.cs" t="Include" />
+        <e p="RecordHierarchy.cs" t="Include" />
+        <e p="Registration" t="Include">
+          <e p="IRegistrationBuilder.cs" t="Include" />
+          <e p="RegistrationBuilder.cs" t="Include" />
+          <e p="ScanningRegistrationExtensions.cs" t="Include" />
+        </e>
+        <e p="Templates.cs" t="Include" />
+        <e p="Templates.tt" t="Include" />
+        <e p="TypeInfo.cs" t="Include" />
+        <e p="Validation" t="Include">
+          <e p="EntityValidator.cs" t="Include" />
+          <e p="FileValidator.cs" t="Include" />
+          <e p="IValidatingEntities.cs" t="Include" />
+          <e p="IValidatingFiles.cs" t="Include" />
+          <e p="ValidationAttributeExtensions.cs" t="Include" />
+        </e>
+        <e p="ValueConverter.cs" t="Include" />
+        <e p="Verbose.cs" t="Include" />
+      </e>
+      <e p="src\Ilaro.Admin.Ninject" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="App_Start" t="Include">
+          <e p="DependencyInjectionStart.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Bootstrapper.cs" t="Include" />
+        <e p="Ilaro.Admin.Ninject.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PerUserCacheScopingExtention.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="src\Ilaro.Admin.Unity" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="App_Start" t="Include">
+          <e p="DependencyInjectionStart.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Bootstrapper.cs" t="Include" />
+        <e p="Ilaro.Admin.Unity.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PerUserCacheLifetimeManager.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="tests\Ilaro.Admin.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Core" t="Include">
+          <e p="Data" t="Include">
+            <e p="DbCommandExecutor_.cs" t="Include" />
+            <e p="ManyToMany.cs" t="Include" />
+            <e p="RecordsCreator_.cs" t="Include" />
+            <e p="RecordsCreator_ManyToMany.cs" t="Include" />
+            <e p="RecordsDeleter_.cs" t="Include" />
+            <e p="RecordsSource_BoolEntityFilters.cs" t="Include" />
+            <e p="RecordsSource_ChangesEntityFilters.cs" t="Include" />
+            <e p="RecordsSource_DateTimeEntityFilters.cs" t="Include" />
+            <e p="RecordsSource_DetermineDisplayValue.cs" t="Include" />
+            <e p="RecordsSource_EnumEntityFilters.cs" t="Include" />
+            <e p="RecordsSource_ForeignEntityFilters.cs" t="Include" />
+            <e p="RecordsSource_GetEntityWithData.cs" t="Include" />
+            <e p="RecordsSource_GetRecord.cs" t="Include" />
+            <e p="RecordsSource_Ordering.cs" t="Include" />
+            <e p="RecordsSource_Paging.cs" t="Include" />
+            <e p="RecordsSource_Searching_Numeric.cs" t="Include" />
+            <e p="RecordsSource_Searching_String.cs" t="Include" />
+            <e p="RecordsUpdater_.cs" t="Include" />
+            <e p="RecordsUpdater_ManyToMany.cs" t="Include" />
+          </e>
+          <e p="Entity_Initialise.cs" t="Include" />
+          <e p="EntityChange_.cs" t="Include" />
+          <e p="Property_DetermineForeignKey.cs" t="Include" />
+        </e>
+        <e p="Database" t="Include">
+          <e p="CreateDatabase.sql" t="Include" />
+          <e p="DropAllObjects.sql" t="Include" />
+        </e>
+        <e p="DatabaseCommandExecutor.cs" t="Include" />
+        <e p="FakeClock.cs" t="Include" />
+        <e p="Filters" t="Include">
+          <e p="BoolEntityFilter_.cs" t="Include" />
+          <e p="ChangeEntityFilter_.cs" t="Include" />
+          <e p="DateTimeEntityFilter_.cs" t="Include" />
+          <e p="EnumEntityFilter_.cs" t="Include" />
+          <e p="ForeignEntityFilter_.cs" t="Include" />
+        </e>
+        <e p="Ilaro.Admin.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Registration" t="Include">
+          <e p="EntitiesRegistration_.cs" t="Include" />
+        </e>
+        <e p="SqlServerDatabaseTest.cs" t="Include" />
+        <e p="TestBase.cs" t="Include" />
+        <e p="TestEntity.cs" t="Include" />
+        <e p="TestModels" t="Include">
+          <e p="Northwind" t="Include">
+            <e p="Category.cs" t="Include" />
+            <e p="Customer.cs" t="Include" />
+            <e p="Employee.cs" t="Include" />
+            <e p="EmployeeTerritory.cs" t="Include" />
+            <e p="EntityChange.cs" t="Include" />
+            <e p="Order.cs" t="Include" />
+            <e p="OrderDetail.cs" t="Include" />
+            <e p="Product.cs" t="Include" />
+            <e p="Region.cs" t="Include" />
+            <e p="Shipper.cs" t="Include" />
+            <e p="Supplier.cs" t="Include" />
+            <e p="Territory.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Utils" t="Include">
+          <e p="TestUtils.cs" t="Include" />
+        </e>
+      </e>
+      <e p="tests\Ilaro.Admin.Tests.Scenarios.ScannedAssembly" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Category.cs" t="Include" />
+        <e p="Configurators" t="Include">
+          <e p="CategoryConfigurator.cs" t="Include" />
+        </e>
+        <e p="Entity.cs" t="Include" />
+        <e p="Ilaro.Admin.Tests.Scenarios.ScannedAssembly.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Car.cs" t="Include" />
+          <e p="Product.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Order.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Role.cs" t="Include" />
+        <e p="TestEnum.cs" t="Include" />
+        <e p="TestInterface.cs" t="Include" />
+        <e p="User.cs" t="Include" />
+      </e>
+    </e>
+    <e p="C:\Users\s.prozorov\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Ilaro.Admin.1771769934.00" t="ExcludeRecursive" />
+  </component>
+</project>

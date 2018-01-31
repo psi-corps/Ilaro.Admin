@@ -86,8 +86,6 @@
     </Compile>
     <Compile Include="ConcurrencyCheck.cs" />
     <Compile Include="ConcurrencyCheckException.cs" />
-    <Compile Include="Configuration.cs" />
-    <Compile Include="ConfigurationProvider.cs" />
     <Compile Include="Customization\AttributesConfigurator.cs" />
     <Compile Include="Customization\Customizers\ClassCustomizerHolder.cs" />
     <Compile Include="Customization\Customizers\CustomizersHolder.cs" />
@@ -127,7 +125,6 @@
     <Compile Include="DataAnnotations\SoftDeleteAttribute.cs" />
     <Compile Include="DataAnnotations\TemplateAttribute.cs" />
     <Compile Include="DataAnnotations\VerboseAttribute.cs" />
-    <Compile Include="DataType.cs" />
     <Compile Include="DataTypeConverter.cs" />
     <Compile Include="Data\ChangesDescriber.cs" />
     <Compile Include="Data\DataBehavior.cs" />
@@ -158,7 +155,6 @@
     <Compile Include="Data\RecordsUpdater.cs" />
     <Compile Include="DeleteOption.cs" />
     <Compile Include="DeleteOptionsHierarchyBuilder.cs" />
-    <Compile Include="Entity.cs" />
     <Compile Include="EntityChangeType.cs" />
     <Compile Include="EntityExtensions.cs" />
     <Compile Include="EntityHierarchy.cs" />
@@ -202,15 +198,8 @@
     <Compile Include="Filters\StringEntityFilter.cs" />
     <Compile Include="Filters\TemplatedSelectListItem.cs" />
     <Compile Include="HttpContextUserProvider.cs" />
-    <Compile Include="IConfiguration.cs" />
-    <Compile Include="IConfigurationProvider.cs" />
-    <Compile Include="IEntityChange.cs" />
     <Compile Include="IIlaroAdmin.cs" />
-    <Compile Include="IKnowTheTime.cs" />
     <Compile Include="IlaroAdmin.cs" />
-    <Compile Include="IProvidingUser.cs" />
-    <Compile Include="Links.cs" />
-    <Compile Include="Logging.cs" />
     <Compile Include="Models\ChangeRow.cs" />
     <Compile Include="Models\Column.cs" />
     <Compile Include="Models\EntitiesChangesModel.cs" />
@@ -232,23 +221,17 @@
     <Compile Include="Models\WrappedFilterOption.cs" />
     <Compile Include="NotificateType.cs" />
     <Compile Include="Notificator.cs" />
-    <Compile Include="OrderType.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Property.cs" />
     <Compile Include="PropertyTemplate.cs" />
-    <Compile Include="PropertyTypeInfo.cs" />
     <Compile Include="PropertyValue.cs" />
     <Compile Include="RecordHierarchy.cs" />
     <Compile Include="Registration\IRegistrationBuilder.cs" />
     <Compile Include="Registration\RegistrationBuilder.cs" />
     <Compile Include="Registration\ScanningRegistrationExtensions.cs" />
-    <Compile Include="SystemClock.cs" />
     <Compile Include="Templates.cs">
       <DependentUpon>Templates.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TypeHelpers.cs" />
     <Compile Include="TypeInfo.cs" />
     <Compile Include="Validation\EntityValidator.cs" />
     <Compile Include="Validation\FileValidator.cs" />

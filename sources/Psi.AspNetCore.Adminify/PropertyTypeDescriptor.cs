@@ -1,60 +1,53 @@
-﻿using System;
-using System.Linq;
-using Ilaro.Admin.Core.Extensions;
-using SystemDataType = System.ComponentModel.DataAnnotations.DataType;
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.ComTypes;
 
-namespace Ilaro.Admin.Core
+namespace Psi.AspNetCore.Adminify
 {
-    public class PropertyTypeInfo
+    using System;
+    
+    
+    public class PropertyTypeDescriptor
     {
-        public Type OriginalType { get; internal set; }
-        public Type NotNullableType
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool IsIntegerType(Type type)
         {
-            get
-            {
-                var notNullableType = UnderlyingType;
-                if (notNullableType != null)
-                    return notNullableType;
-                return OriginalType;
-            }
+            var typeCode = Type.GetTypeCode(type);
+            
+            return typeCode == TypeCode.Byte || typeCode == TypeCode.SByte
+                || typeCode == TypeCode.Int16 || typeCode == TypeCode.UInt16
+                || typeCode == TypeCode.Int32 || typeCode == TypeCode.UInt32
+                || typeCode == TypeCode.Int64 || typeCode == TypeCode.UInt64;
         }
-        public Type UnderlyingType
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool IsFloatingPointType(Type type)
         {
-            get { return Nullable.GetUnderlyingType(OriginalType); }
-        }
-        public DataType DataType { get; internal set; }
-        public SystemDataType? SourceDataType { get; internal set; }
-        public Type EnumType { get; internal set; }
-        /// <summary>
-        /// If a property type (or sub type if property is a collection) 
-        /// is a system type (namespace starts with "System") or not.
-        /// </summary>
-        public bool IsSystemType { get; private set; }
-        /// <summary>
-        /// If property is a collection and has sub type.
-        /// </summary>
-        public bool IsCollection { get; private set; }
+            var typeCode = Type.GetTypeCode(type);
+            return typeCode == TypeCode.Single || typeCode == TypeCode.Double || typeCode == TypeCode.Decimal;
+        }        
+        
+        
+        public DataMemberType DataMemberType { get; }
 
-        public bool IsReal
-        {
-            get { return TypeInfo.IsReal(OriginalType); }
-        }
-        public bool IsFloatingPoint
-        {
-            get { return TypeInfo.IsFloatingPoint(OriginalType); }
-        }
-        public bool IsNumber
-        {
-            get { return TypeInfo.IsNumber(OriginalType); }
-        }
-        public bool IsBool
-        {
-            get { return TypeInfo.IsBool(OriginalType); }
-        }
+        public bool IsSystemType { get; }
+        
+        public bool IsCollection { get; }
+
+        public bool IsBoolean => SystemTypeCode == TypeCode.Boolean;
+
+        public bool IsInteger => IsIntegerType(OriginalType) || IsIntegerType(UnderlyingType);
+
+        public bool IsFloatingPoint => IsFloatingPointType(OriginalType) || IsFloatingPointType(UnderlyingType);
+
+        public bool IsNumeric => IsInteger || IsFloatingPoint;
+
+        public bool IsBool => SystemTypeCode == TypeCode.Boolean;
+
         public bool IsGuid
         {
             get { return TypeInfo.IsGuid(OriginalType); }
         }
+        
         public bool IsAvailableForSearch
         {
             get { return TypeInfo.IsAvailableForSearch(OriginalType); }
@@ -88,7 +81,28 @@ namespace Ilaro.Admin.Core
         public bool IsFile
         {
             get { return DataType == DataType.Image || DataType == DataType.File; }
-        }
+        }        
+        
+        
+        public Type OriginalType { get; }
+
+        public Type UnderlyingType => Nullable.GetUnderlyingType(OriginalType);
+
+        public Type NotNullableType => UnderlyingType ?? OriginalType;
+
+        public SystemDataType SorceDataType { get; internal set; }
+
+        public Type EnumType { get; internal set; }
+
+        public TypeCode SystemTypeCode => Type.GetTypeCode(OriginalType);
+
+
+
+
+
+    }
+}
+
 
         public PropertyTypeInfo(Type type)
         {
@@ -148,5 +162,3 @@ namespace Ilaro.Admin.Core
                 DataType = DataType.Text;
             }
         }
-    }
-}

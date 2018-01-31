@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Ilaro.Admin.Core
 {
-    public static class TypeInfo
+    public static class TypeExtensions
     {
         private static readonly Type[] Real = new[]
         {
@@ -64,10 +64,7 @@ namespace Ilaro.Admin.Core
             return IsReal(type) || IsFloatingPoint(type);
         }
 
-        public static bool IsBool(Type type)
-        {
-            return Bool.Contains(type);
-        }
+        public static bool IsBool(Type type) => type == typeof(bool) || type == typeof(bool?);
 
         public static bool IsGuid(Type type)
         {
