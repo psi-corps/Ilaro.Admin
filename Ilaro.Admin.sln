@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ilaro.Admin.Core", "src\Ila
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Psi.Adminify.Core", "sources\Psi.Adminify.Core\Psi.Adminify.Core.csproj", "{0C8C645F-7D5E-4A7D-8BEA-19B110CD1CFD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Psi.Adminify.AspNetCore", "sources\Psi.Adminify.AspNetCore\Psi.Adminify.AspNetCore.csproj", "{E5089BE5-15C7-4672-A455-32822848E54C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,12 +63,11 @@ Global
 		{0C8C645F-7D5E-4A7D-8BEA-19B110CD1CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C8C645F-7D5E-4A7D-8BEA-19B110CD1CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C8C645F-7D5E-4A7D-8BEA-19B110CD1CFD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5089BE5-15C7-4672-A455-32822848E54C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5089BE5-15C7-4672-A455-32822848E54C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5089BE5-15C7-4672-A455-32822848E54C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5089BE5-15C7-4672-A455-32822848E54C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37703CA2-C91A-4001-9ECD-5F3AB009A713}
 	EndGlobalSection
 EndGlobal
