@@ -5,6 +5,7 @@ using System.Web;
 using Ilaro.Admin.Core.DataAnnotations;
 using Ilaro.Admin.Core.Extensions;
 using Ilaro.Admin.Core.Data;
+using Microsoft.AspNetCore.Http;
 
 namespace Ilaro.Admin.Core.File
 {

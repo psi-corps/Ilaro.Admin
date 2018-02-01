@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Text;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Mvc.Ajax;
-using System.Web.Routing;
+using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Routing;
 
 namespace Ilaro.Admin.Core.Models.Paging
 {
@@ -39,7 +38,7 @@ namespace Ilaro.Admin.Core.Models.Paging
 
             if (pageCount <= 1)
             {
-                return new MvcHtmlString(String.Empty);
+                return new HtmlString(String.Empty);
             }
 
             const int nrOfPagesToDisplay = 10;
@@ -182,7 +181,7 @@ namespace Ilaro.Admin.Core.Models.Paging
 
         private string GeneratePageLink(string linkText, int pageNumber)
         {
-            var routeDataValues = _viewContext.RequestContext.RouteData.Values;
+            var routeDataValues = _viewContext.RouteData.Values;
             RouteValueDictionary pageLinkValueDictionary;
             // Avoid canonical errors when page count is equal to 1.
             if (pageNumber == 1)
@@ -217,7 +216,7 @@ namespace Ilaro.Admin.Core.Models.Paging
 
             // 'Render' virtual path.
             var virtualPathForArea = RouteTable.Routes.GetVirtualPathForArea(
-                _viewContext.RequestContext,
+                _viewContext,
                 pageLinkValueDictionary);
 
             if (virtualPathForArea == null)

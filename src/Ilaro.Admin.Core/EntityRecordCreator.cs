@@ -4,9 +4,8 @@ using Ilaro.Admin.Core.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Ilaro.Admin.Core
 {
@@ -15,7 +14,7 @@ namespace Ilaro.Admin.Core
         public static EntityRecord CreateRecord(
             Entity entity,
             IValueProvider valueProvider,
-            HttpFileCollectionBase files,
+            IFormFileCollection files,
             Func<Property, object> defaultValueResolver = null)
         {
             var entityRecord = new EntityRecord(entity);
@@ -74,7 +73,7 @@ namespace Ilaro.Admin.Core
         private static PropertyValue GetPropertyValueForFile(
             Property property,
             IValueProvider valueProvider,
-            HttpFileCollectionBase files)
+            IFormFileCollection files)
         {
             var propertyValue = new PropertyValue(property);
 

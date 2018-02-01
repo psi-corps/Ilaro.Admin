@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Web;
-using System.Web.Mvc;
 using Ilaro.Admin.Core.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Ilaro.Admin.Core.Data
 {
@@ -9,14 +8,14 @@ namespace Ilaro.Admin.Core.Data
     {
         string Create(
             Entity entity, 
-            FormCollection collection, 
-            HttpFileCollectionBase files);
+            FormCollection collection,
+            IFormFileCollection files);
 
         bool Edit(
             Entity entity,
             string key,
             FormCollection collection,
-            HttpFileCollectionBase files,
+            IFormFileCollection files,
             object concurrencyCheckValue = null);
 
         bool Delete(

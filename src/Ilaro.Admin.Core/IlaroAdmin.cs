@@ -1,12 +1,11 @@
 ﻿using Ilaro.Admin.Core.Customization;
 using Ilaro.Admin.Core.Customization.Customizers;
-using Ilaro.Admin.Core;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Linq;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Ilaro.Admin.Core
 {

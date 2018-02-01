@@ -1,5 +1,5 @@
-﻿using System.Web.Mvc;
-using System.Web.Security;
+﻿using System.Web.Security;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Ilaro.Admin.Areas.IlaroAdmin.Controllers
 {

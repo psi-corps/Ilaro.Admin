@@ -1,6 +1,6 @@
-﻿using System.Web.Mvc;
-using Ilaro.Admin.Core.Extensions;
+﻿using Ilaro.Admin.Core.Extensions;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Ilaro.Admin.Core.Filters
 {

@@ -1,5 +1,5 @@
-﻿using System.Web.Mvc;
-using Ilaro.Admin.Core.Filters;
+﻿using Ilaro.Admin.Core.Filters;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Ilaro.Admin.Core.Models
 {

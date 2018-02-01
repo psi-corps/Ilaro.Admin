@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 using Ilaro.Admin.Core.File;
 using Ilaro.Admin.Core.Extensions;
 using Ilaro.Admin.Core.Models;
 using Ilaro.Admin.Core.Validation;
+using Microsoft.AspNetCore.Http;
 using Resources;
 
 namespace Ilaro.Admin.Core.Data
@@ -69,7 +68,7 @@ namespace Ilaro.Admin.Core.Data
         public string Create(
             Entity entity,
             FormCollection collection,
-            HttpFileCollectionBase files)
+            IFormFileCollection files)
         {
             var entityRecord = entity.CreateRecord(collection, files, x => x.OnCreateDefaultValue);
             if (_validator.Validate(entityRecord) == false)
@@ -106,7 +105,7 @@ namespace Ilaro.Admin.Core.Data
             Entity entity,
             string key,
             FormCollection collection,
-            HttpFileCollectionBase files,
+            IFormFileCollection files,
             object concurrencyCheckValue = null)
         {
             try

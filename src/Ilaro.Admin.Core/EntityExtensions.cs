@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Ilaro.Admin.Core
 {
@@ -81,7 +81,7 @@ namespace Ilaro.Admin.Core
         public static EntityRecord CreateRecord(
             this Entity entity,
             IValueProvider valueProvider,
-            HttpFileCollectionBase files,
+            IFormFileCollection files,
             Func<Property, object> defaultValueResolver = null)
         {
             return EntityRecordCreator.CreateRecord(entity, valueProvider, files, defaultValueResolver);
@@ -112,7 +112,7 @@ namespace Ilaro.Admin.Core
             this Entity entity,
             string key,
             IValueProvider valueProvider,
-            HttpFileCollectionBase files,
+            IFormFileCollection files,
             Func<Property, object> defaultValueResolver = null)
         {
             var entityRecord = entity.CreateRecord(valueProvider, files, defaultValueResolver);

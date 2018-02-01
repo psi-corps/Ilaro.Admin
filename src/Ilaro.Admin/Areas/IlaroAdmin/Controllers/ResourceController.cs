@@ -2,6 +2,7 @@
 using System.IO;
 using System.Web.Mvc;
 using Ilaro.Admin.Core;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Ilaro.Admin.Areas.IlaroAdmin.Controllers
 {

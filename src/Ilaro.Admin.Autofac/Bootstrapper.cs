@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.ComponentModel;
+using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Ilaro.Admin.Core;

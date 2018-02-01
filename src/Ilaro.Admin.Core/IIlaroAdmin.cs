@@ -1,29 +1,33 @@
-﻿namespace Ilaro.Admin.Core
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Web.Mvc;    
+﻿using Ilaro.Admin.Core.Customization.Customizers;
+using System;
+using System.Collections.ObjectModel;
+using Microsoft.AspNetCore.Mvc.Filters;
 
-    using Customization.Customizers;    
-    
-    public interface IAdminify
+namespace Ilaro.Admin.Core
+{
+    public interface IIlaroAdmin
     {
-        IReadOnlyList<EntityDescriptor> Entities { get; }
-        
-        EntityDescriptor ChangeEntity { get; }
-        bool IsChangingEnabled { get; }
+        ReadOnlyCollection<Entity> Entities { get; }
+        Entity ChangeEntity { get; }
+        bool IsChangesEnabled { get; }
 
         IAuthorizationFilter Authorize { get; }
-        string ConnectionString { get; }
-        string RoutePrefix { get; }
+        string ConnectionStringName { get; }
+        string RoutesPrefix { get; }
 
         void RegisterEntity(Type entityType);
-        EntityCustomizer<TEntity> RegisterEntity<TEntity>() where TEntity : class;        
-        void RegisterEntityWithAtributes(Type entityType);
+        EntityCustomizer<TEntity> RegisterEntity<TEntity>() where TEntity : class;
+
+        void RegisterEntityWithAttributes(Type entityType);
         EntityCustomizer<TEntity> RegisterEntityWithAttributes<TEntity>() where TEntity : class;
 
-        EntityDescriptor GetEntity(string name);
-        EntityDescriptor GetEntity(Type type);
-        EntityDescriptor GetEntity<TEntity>();
+        Entity GetEntity(string entityName);
+        Entity GetEntity(Type type);
+        Entity GetEntity<TEntity>() where TEntity : class;
+
+        void Initialise(
+            string connectionStringName = "",
+            string routesPrefix = "IlaroAdmin",
+            IAuthorizationFilter authorize = null);
     }
 }

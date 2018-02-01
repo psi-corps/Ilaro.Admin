@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Web.Mvc;
 using System.Globalization;
 using System.Reflection;
 using Ilaro.Admin.Core.Registration;
 using Ilaro.Admin.Core.Customization.Customizers;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Ilaro.Admin.Core
 {

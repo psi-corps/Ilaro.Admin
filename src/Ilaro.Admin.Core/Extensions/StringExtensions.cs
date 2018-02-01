@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data.Entity.Design.PluralizationServices;
-using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -146,9 +144,7 @@ namespace Ilaro.Admin.Core.Extensions
                 return value;
             }
 
-            return PluralizationService
-                .CreateService(new CultureInfo("en-US"))
-                .Pluralize(value);
+            return value + "s";
         }
 
         public static string ToStringSafe(this object value)

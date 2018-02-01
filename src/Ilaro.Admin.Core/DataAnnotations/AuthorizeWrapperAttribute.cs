@@ -1,17 +1,17 @@
 ﻿using System;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Ilaro.Admin.Core.DataAnnotations
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public class AuthorizeWrapperAttribute : FilterAttribute, IAuthorizationFilter
+    public class AuthorizeWrapperAttribute : Attribute, IAuthorizationFilter
     {
-        public void OnAuthorization(AuthorizationContext filterContext)
+        public void OnAuthorization(AuthorizationFilterContext context)
         {
             var authorize = Admin.Current.Authorize;
             if (authorize != null)
             {
-                authorize.OnAuthorization(filterContext);
+                authorize.OnAuthorization(context);
             }
         }
     }
