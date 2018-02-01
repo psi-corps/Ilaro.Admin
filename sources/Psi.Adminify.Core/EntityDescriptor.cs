@@ -1,11 +1,10 @@
-﻿namespace Psi.AspNetCore.Adminify
+﻿using System;
+using System.Reflection;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Psi.Adminify.Core
 {
-    using System;
-    using System.Reflection;    
-    using System.Collections.Generic;
-    using System.Linq;
-    
-    
     /// <summary>
     /// Describes an entity.
     /// </summary>
@@ -20,10 +19,10 @@
         {
             Type = type ?? throw new ArgumentNullException(nameof(type));
             //Verbose = new Verbose(Type);
-           
+
             Properties = type
                 .GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                .Select(p => new PropertyDescriptor())
+                .Select(p => new PropertyDescriptor(p))
                 .ToList();
 
 //            if (IsChangeEntity)
@@ -35,13 +34,11 @@
 //            HasToStringMethod =
 //                Type.GetMethod("ToString")
 //                    .DeclaringType.Name != "Object";
-            
-            
+
+
             //SetTableName(Name.Pluralize());
-        }        
-        
-        
-        
+        }
+
         /// <summary>
         /// Gets the entity type.
         /// </summary>
@@ -52,10 +49,10 @@
         /// </summary>
         public string Name => Type.Name;
 
-        /// <summary>
-        /// Gets the table name.
-        /// </summary>
-        public string Table { get; }
+        ///// <summary>
+        ///// Gets the table name.
+        ///// </summary>
+        //public string Table { get; }
 
 //        /// <summary>
 //        /// Gets the verbose.
@@ -81,16 +78,17 @@
 
 //        public Links Links { get; } = new Links();
 
-        public string DisplayFormat { get; internal set; }        
+        public string DisplayFormat { get; internal set; }
 
         //public bool HasToStringMethod { get; }
         public bool SoftDeleteEnabled { get; internal set; }
+
         public bool ConcurrencyCheckEnabled { get; internal set; }
 
         public PropertyDescriptor this[string name] => Properties.FirstOrDefault(p => p.Name == name);
-        
-        
-        
+
+
+
 //        internal void SetTableName(string table, string schema = null)
 //        {
 //            if (!schema.IsNullOrEmpty())
@@ -101,7 +99,7 @@
 //            {
 //                Table = "[" + table + "]";
 //            }
-//        }        
-        
+//        }
+
     }
 }

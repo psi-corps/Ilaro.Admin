@@ -1,4 +1,4 @@
-﻿namespace Ilaro.Admin.Core
+﻿namespace Psi.Adminify.Core.Configuration
 {
     /// <summary>
     /// An interface to the configuration provider.

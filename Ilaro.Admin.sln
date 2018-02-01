@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ilaro.Admin", "src\Ilaro.Admin\Ilaro.Admin.csproj", "{87DB09C0-33DE-4198-95DB-7C157D1A705C}"
 EndProject
@@ -19,9 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ilaro.Admin.Autofac", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ilaro.Admin.Core", "src\Ilaro.Admin.Core\Ilaro.Admin.Core.csproj", "{8C087728-C34E-4E42-B0AC-5E4783589494}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psi.AspNetCore.Adminify", "sources\Psi.AspNetCore.Adminify\Psi.AspNetCore.Adminify.csproj", "{0C8C645F-7D5E-4A7D-8BEA-19B110CD1CFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Psi.Adminify.Core", "sources\Psi.Adminify.Core\Psi.Adminify.Core.csproj", "{0C8C645F-7D5E-4A7D-8BEA-19B110CD1CFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psi.Adminify.AspNetCore", "sources\Psi.Adminify.AspNetCore\Psi.Adminify.AspNetCore.csproj", "{E5089BE5-15C7-4672-A455-32822848E54C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Psi.Adminify.AspNetCore", "sources\Psi.Adminify.AspNetCore\Psi.Adminify.AspNetCore.csproj", "{E5089BE5-15C7-4672-A455-32822848E54C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

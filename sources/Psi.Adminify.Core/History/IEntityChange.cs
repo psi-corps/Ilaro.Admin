@@ -1,4 +1,4 @@
-﻿namespace Psi.AspNetCore.Adminify.History
+﻿namespace Psi.Adminify.Core.History
 {
     using System;    
     
@@ -10,7 +10,7 @@
         /// <summary>
         /// Gets or sets the change id.
         /// </summary>
-        Guid ID { get; set; }
+        Guid Id { get; set; }
 
         /// <summary>
         /// Gets or sets entity name.

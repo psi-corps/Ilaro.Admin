@@ -1,4 +1,4 @@
-﻿namespace Psi.AspNetCore.Adminify.Configuration
+﻿namespace Psi.Adminify.Core.Configuration
 {
     public interface IConfiguration
     {

@@ -1,4 +1,4 @@
-﻿namespace Psi.AspNetCore.Adminify
+﻿namespace Psi.Adminify.Core
 {
     public enum DataMemberType : byte
     {
@@ -10,6 +10,6 @@
         DateTime,
         File,
         Image,
-        Binary        
+        Binary
     }
 }

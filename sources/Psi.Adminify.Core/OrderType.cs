@@ -1,4 +1,4 @@
-﻿namespace Ilaro.Admin.Core
+﻿namespace Psi.Adminify.Core
 {
     public enum OrderType
     {

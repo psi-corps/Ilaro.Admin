@@ -1,4 +1,4 @@
-﻿namespace Psi.AspNetCore.Adminify
+﻿namespace Psi.Adminify.Core
 {
 //    using System.Collections.Generic;
 //    using System.Linq;

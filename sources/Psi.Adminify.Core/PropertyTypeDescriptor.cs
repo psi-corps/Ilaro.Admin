@@ -1,37 +1,21 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.ComTypes;
 
-namespace Psi.AspNetCore.Adminify
+namespace Psi.Adminify.Core
 {
-    using System;
-    
-    
     public class PropertyTypeDescriptor
     {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static bool IsIntegerType(Type type)
+        public PropertyTypeDescriptor(Type type)
         {
-            var typeCode = Type.GetTypeCode(type);
-            
-            return typeCode == TypeCode.Byte || typeCode == TypeCode.SByte
-                || typeCode == TypeCode.Int16 || typeCode == TypeCode.UInt16
-                || typeCode == TypeCode.Int32 || typeCode == TypeCode.UInt32
-                || typeCode == TypeCode.Int64 || typeCode == TypeCode.UInt64;
+            OriginalType = type;
         }
         
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static bool IsFloatingPointType(Type type)
-        {
-            var typeCode = Type.GetTypeCode(type);
-            return typeCode == TypeCode.Single || typeCode == TypeCode.Double || typeCode == TypeCode.Decimal;
-        }        
-        
-        
-        public DataMemberType DataMemberType { get; }
+        //public DataMemberType DataMemberType { get; }
 
-        public bool IsSystemType { get; }
+        //public bool IsSystemType { get; }
         
-        public bool IsCollection { get; }
+        //public bool IsCollection { get; }
 
         public bool IsBoolean => SystemTypeCode == TypeCode.Boolean;
 
@@ -43,45 +27,30 @@ namespace Psi.AspNetCore.Adminify
 
         public bool IsBool => SystemTypeCode == TypeCode.Boolean;
 
-        public bool IsGuid
-        {
-            get { return TypeInfo.IsGuid(OriginalType); }
-        }
-        
-        public bool IsAvailableForSearch
-        {
-            get { return TypeInfo.IsAvailableForSearch(OriginalType); }
-        }
+        public bool IsGuid => NotNullableType == typeof(Guid);
 
-        public bool IsEnum
-        {
-            get { return OriginalType.IsEnum; }
-        }
+        //public bool IsAvailableForSearch
+        //{
+        //    get { return TypeInfo.IsAvailableForSearch(OriginalType); }
+        //}
 
-        public bool IsNullable
-        {
-            get { return TypeHelpers.IsNullableValueType(OriginalType); }
-        }
+        public bool IsEnum => OriginalType.IsEnum;
 
-        public bool IsString
-        {
-            get { return OriginalType == typeof(string); }
-        }
+        public bool IsNullable => OriginalType.IsNullableValueType();
 
-        public bool IsFileStoredInDb
-        {
-            get { return IsFile && IsString == false; }
-        }
+        public bool IsString => OriginalType == typeof(string);
 
-        public bool IsImage
-        {
-            get { return DataType == DataType.Image; }
-        }
+        //public bool IsFileStoredInDb => IsFile && IsString == false;
 
-        public bool IsFile
-        {
-            get { return DataType == DataType.Image || DataType == DataType.File; }
-        }        
+        //public bool IsImage
+        //{
+        //    get { return DataType == DataType.Image; }
+        //}
+
+        //public bool IsFile
+        //{
+        //    get { return DataType == DataType.Image || DataType == DataType.File; }
+        //}
         
         
         public Type OriginalType { get; }
@@ -90,20 +59,33 @@ namespace Psi.AspNetCore.Adminify
 
         public Type NotNullableType => UnderlyingType ?? OriginalType;
 
-        public SystemDataType SorceDataType { get; internal set; }
+        //public SystemDataType SourceDataType { get; internal set; }
 
         public Type EnumType { get; internal set; }
 
         public TypeCode SystemTypeCode => Type.GetTypeCode(OriginalType);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool IsIntegerType(Type type)
+        {
+            var typeCode = Type.GetTypeCode(type);
 
+            return typeCode == TypeCode.Byte || typeCode == TypeCode.SByte
+                   || typeCode == TypeCode.Int16 || typeCode == TypeCode.UInt16
+                   || typeCode == TypeCode.Int32 || typeCode == TypeCode.UInt32
+                   || typeCode == TypeCode.Int64 || typeCode == TypeCode.UInt64;
+        }
 
-
-
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool IsFloatingPointType(Type type)
+        {
+            var typeCode = Type.GetTypeCode(type);
+            return typeCode == TypeCode.Single || typeCode == TypeCode.Double || typeCode == TypeCode.Decimal;
+        }
     }
 }
 
-
+/*
         public PropertyTypeInfo(Type type)
         {
             OriginalType = type;
@@ -162,3 +144,4 @@ namespace Psi.AspNetCore.Adminify
                 DataType = DataType.Text;
             }
         }
+*/

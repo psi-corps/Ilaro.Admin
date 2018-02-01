@@ -1,33 +1,31 @@
-﻿namespace Psi.AspNetCore.Adminify
-{
-    using System.Reflection;
-    using static System.String;
+﻿using System.Reflection;
 
-    
+namespace Psi.Adminify.Core
+{
     public class PropertyDescriptor
     {
+        public PropertyDescriptor(PropertyInfo info)
+        {
+            Info = info;
+            Type = new PropertyTypeDescriptor(info.PropertyType);
+        }
+
         private string _column;
-        
-        
-        
-        public string Name { get; }
+
+        public string Name => Info.Name;
 
         public EntityDescriptor Owner { get; }
 
         public PropertyInfo Info { get; }
-        
-        public PropertyTypeDescriptor Type { get; }        
 
-        
-        
+        public PropertyTypeDescriptor Type { get; }
+
         public string Column
         {
             get => _column;
             set => _column = value.StartsWith("[") && value.EndsWith("]") ? value : $"[{value}]";
-        }        
-        
-        
-        
+        }
+
         public string Display { get; }
 
         public string Group { get; }
@@ -36,24 +34,18 @@
 
         public string Prompt { get; }
 
-        public string Format { get; }         
-        
-        
-        
+        public string Format { get; }
+
         public bool IsVisible { get; }
 
         public bool IsSearchable { get; }
 
         public bool IsRequired { get; }
 
-
-
         public bool IsKey { get; }
 
-
-        
         public bool IsForeignKey { get; }
-        
+
         public EntityDescriptor ForeignEntity { get; }
 
         public string ForeignKeyName { get; }
@@ -64,16 +56,12 @@
 
         public string ReferencePropertyName { get; }
 
-
-
-        public bool IsAutoKey => IsKey && Type.DataMemberType != DataMemberType.Text
-            && Type.DataMemberType != DataMemberType.Password && !(IsForeignKey || Type.IsCollection); 
-
-
-
+        //public bool IsAutoKey => IsKey && Type.DataMemberType != DataMemberType.Text
+        //                         && Type.DataMemberType != DataMemberType.Password &&
+        //                         !(IsForeignKey || Type.IsCollection);
     }
-    
-    
+
+
 //    public class Property
 //    {
 //        public CascadeOption CascadeOption { get; internal set; }

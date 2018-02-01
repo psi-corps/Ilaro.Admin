@@ -1,4 +1,4 @@
-﻿namespace Psi.AspNetCore.Adminify.Logging
+﻿namespace Psi.Adminify.Core.Logging
 {
     using System;
     using System.Threading.Tasks;

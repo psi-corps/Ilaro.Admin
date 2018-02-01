@@ -1,4 +1,4 @@
-﻿namespace Psi.AspNetCore.Adminify.History
+﻿namespace Psi.Adminify.Core.History
 {
     /// <summary>
     /// Object change type.
